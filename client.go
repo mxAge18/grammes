@@ -127,3 +127,7 @@ func (c *Client) Address() string {
 func (c *Client) Auth() (*gremconnect.Auth, error) {
 	return c.conn.Auth()
 }
+// IsDisposed returns whether the client is Disposed or not.
+func (c *Client) IsDisposed() bool {
+	return c.conn.IsDisposed()
+}
